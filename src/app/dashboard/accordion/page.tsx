@@ -67,10 +67,14 @@ const items = [
 
 export default function AccordionPage() {
   return (
-    <Accordion type="single" collapsible className="w-full">
+    <Accordion
+      type="single"
+      collapsible
+      className="w-full rounded-lg border border-gray-200"
+    >
       {items.map((item) => (
         <AccordionItem key={item.id} value={item.value}>
-          <AccordionTrigger className="bg-gray-100 p-4">
+          <AccordionTrigger className="bg-gray-100 p-4 border-b rounded-t-lg">
             {item.title}
           </AccordionTrigger>
           <AccordionContent className="bg-white p-4">
